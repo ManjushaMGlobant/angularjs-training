@@ -1,0 +1,17 @@
+1. Separate out the styles in css file, instead of inline styles in HTML.
+
+2. Only a single script file contains all the JS code
+
+3. Use ng-if where exclusive display of DOM is needed, instead of ng-hide and ng-show
+
+4. Name the parameters appropriately. For eg. "choice" does not give a clear idea on what choice means in the context.
+
+5. Remove unnecessary redundancy in the code. You have called ExpenseService.calculateBalance api after every add/update/delete transaction. But, this can be done in the service itself, implicitly. The controller need not have to remember to calculate Balance every time.
+
+6. Use angular broadcast events, in case if different modules(i.e. controllers/services ) depend on updates in data managed by other service/controller.
+
+7. Show success as well as error messages. 
+
+8. There should always be a user re-confirmation before removing/deleting data.
+
+9. Show help on hovering action icons like View/Edit/Delete
